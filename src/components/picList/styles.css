@@ -1,0 +1,6 @@
+.PicList-img:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    scale: 1.05;
+    transition: all 0.3s ease-in-out;
+}

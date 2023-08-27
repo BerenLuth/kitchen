@@ -31,7 +31,7 @@ const steps = [
 
 const tags = ["pasta", "vegan", "senza glutine", "senza zucchero"];
 
-const pics: string[] = ["/recipesPics/grattugiato/cover.jpg"];
+const pics: string[] = ["/recipesPics/grattugiato/cover.jpg", "/recipesPics/pastaTrePomodori/cover.jpg"];
 
 export const Grattugiato: Recipe = {
   id: "grattugiato_cucina_botanica",

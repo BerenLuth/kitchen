@@ -5,6 +5,7 @@ import { recipes } from "../../assets/recipes/all";
 import "./styles.css";
 import { TextField } from "@mui/material";
 import { useDebounce } from "@greendecision/hooks";
+import PicList from "../../components/picList";
 
 const Recipe: React.FC = () => {
   const { id } = useParams();
@@ -80,9 +81,9 @@ const Recipe: React.FC = () => {
           <a href={recipe?.source}>{recipe?.source}</a>
         </div>
       )}
-      {recipe && recipe?.pictures?.length > 1 && (
+      {recipe && recipe?.pictures?.length > 0 && (
         <div className="Recipe-section">
-          <p>{recipe?.pictures}</p>
+          <PicList pictures={recipe.pictures || []} />
         </div>
       )}
       <div className="Recipe-section">
