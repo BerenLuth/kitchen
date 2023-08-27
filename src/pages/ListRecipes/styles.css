@@ -46,4 +46,6 @@
   width: 120px;
   height: 100%;
   object-fit: cover;
+  border-radius: 16px;
+  
 }

@@ -10,6 +10,7 @@ function App() {
       <Box sx={{ display: "flex", height: "100vh", width: "100vw" }}>
         <Box component="main" sx={{ flexGrow: 1, padding: 0 }}>
           <Routes>
+            <Route path="/" element={<ListRecipes />} />
             <Route path="/recipes" element={<ListRecipes />} />
             <Route path="/recipes/:id" element={<Recipe />} />
           </Routes>
