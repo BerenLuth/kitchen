@@ -11,6 +11,7 @@
   justify-content: center;
   max-width: 500px;
   place-self: center;
+  padding: 16px;
 }
 
 .Recipes-element {
@@ -18,10 +19,12 @@
   flex-direction: row;
   gap: 16px;
   padding: 16px;
+  margin: 8px;
   place-items: center;
   justify-content: space-between;
   width: 100%;
   cursor: pointer;
+  border-radius: 16px;
 }
 
 .Recipes-element:hover {
@@ -47,5 +50,5 @@
   height: 100%;
   object-fit: cover;
   border-radius: 16px;
-  
+
 }

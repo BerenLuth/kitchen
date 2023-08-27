@@ -6,10 +6,12 @@ import "./styles.css";
 import { TextField } from "@mui/material";
 import { useDebounce } from "@greendecision/hooks";
 import PicList from "../../components/picList";
+import { useMediaPredicate } from "react-media-hook";
 
 const Recipe: React.FC = () => {
   const { id } = useParams();
   const recipe = recipes.find((recipe) => recipe.id === id);
+  const preferredTheme = useMediaPredicate("(prefers-color-scheme: dark)") ? "dark" : "light";
 
   const [lastEdited, setLastEdited] = useState(-1);
   const [ingredientsQuantity, setIngredientsQuantity] = useState(
@@ -29,13 +31,15 @@ const Recipe: React.FC = () => {
 
   console.log("bg", recipe?.pictures[0]);
 
+  const bg = preferredTheme === "dark" ? "#242424" : "#fff";
+
   return (
     <div className="Recipe-wrapper">
       {recipe && recipe?.pictures.length > 0 && (
         <div
           className="Recipe-cover"
           style={{
-            backgroundImage: `linear-gradient(0deg, #242424 0%,rgba(0,0,0,0) 100%), url("${recipe?.pictures[0]}")`,
+            backgroundImage: `linear-gradient(0deg, ${bg} 0%,rgba(0,0,0,0) 100%), url("${recipe?.pictures[0]}")`,
           }}
         />
       )}
@@ -45,7 +49,11 @@ const Recipe: React.FC = () => {
         <h3>Ingredients</h3>
         {recipe?.ingredients.map((ingredient, index) => {
           return (
-            <div className="Recipe-ingredients-element" key={ingredient.name}>
+            <div
+              className="Recipe-ingredients-element"
+              key={ingredient.name}
+              data-mui-color-scheme={preferredTheme === "dark" ? "dark" : "light"}
+            >
               <span>{ingredient.name}</span>
               <TextField
                 id="outlined-basic"

@@ -55,3 +55,13 @@
   flex-direction: row;
   gap: 8px;
 }
+
+@media (prefers-color-scheme: light) {
+  .Recipe-wrapper {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  .Recipe-section {
+    background-color: #f9f9f9;
+  }
+}
