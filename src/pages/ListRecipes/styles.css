@@ -45,7 +45,7 @@
   border-radius: 16px;
 }
 
-.Recipes-element:hover {
+.Recipes-element:hover, .Recipes-element:focus {
   background-color: #1c1c1c;
   scale: 1.02;
   transition: 0.3s;
@@ -61,6 +61,11 @@
 .Recipes-title {
   font-size: 1.5rem;
   font-weight: bold;
+  text-align: start;
+}
+
+.Recipes-description {
+  text-align: start;
 }
 
 .Recipes-pic {

@@ -81,7 +81,7 @@ const ListRecipes: React.FC = () => {
           })
           .map((recipe) => {
             return (
-              <div
+              <button
                 key={recipe.id}
                 onClick={() => {
                   nav(`/recipes/${recipe.id}`);
@@ -97,14 +97,15 @@ const ListRecipes: React.FC = () => {
                     textToHighlight={recipe.name}
                   />
                   <Highlighter
-                    highlightClassName="YourHighlightClass"
+                    highlightClassName="Recipes-description"
+                    unhighlightClassName="Recipes-description"
                     searchWords={[search]}
                     autoEscape={true}
                     textToHighlight={recipe.description}
                   />
                 </div>
                 <img className="Recipes-pic" src={recipe.pictures[0]} alt={recipe.name} />
-              </div>
+              </button>
             );
           })}
       </div>
