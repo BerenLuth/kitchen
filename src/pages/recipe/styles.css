@@ -3,6 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 700px;
+  margin: auto;
 }
 
 .Recipe-cover {
@@ -39,20 +41,24 @@
 
 .Recipe-section {
   font-size: 1rem;
-  margin-bottom: 20px;
-  background-color: #1c1c1c;
+  margin: 8px 16px;
+  background-color: #1c1c1caa;
   padding: 16px;
   border-radius: 16px;
+  width: calc(100% - 40px);
+  filter: brightness(1);
 }
 
 .Recipe-section:hover {
   scale: 1.01;
+  background-color: #1c1c1cFF;
   transition: 0.2s;
 }
 
 .Recipe-tags-list {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 8px;
 }
 

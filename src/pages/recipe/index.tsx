@@ -46,7 +46,7 @@ const Recipe: React.FC = () => {
       <div className="Recipe-title">{recipe?.name}</div>
       <div className="Recipe-description">{recipe?.description}</div>
       <div className="Recipe-section">
-        <h3>Ingredients</h3>
+        <h3>Ingredienti</h3>
         {recipe?.ingredients.map((ingredient, index) => {
           return (
             <div
@@ -76,26 +76,22 @@ const Recipe: React.FC = () => {
       <div className="Recipe-section">
         {recipe?.instructions.map((step, index) => {
           return (
-            <div className="Recipe-step">
+            <div className="Recipe-step" key={index}>
               <h3>Step {index + 1}</h3>
               <p>{step}</p>
             </div>
           );
         })}
       </div>
-      {recipe?.source && (
-        <div className="Recipe-section">
-          <h3>Source</h3>
-          <a href={recipe?.source}>{recipe?.source}</a>
-        </div>
-      )}
       {recipe && recipe?.pictures?.length > 0 && (
         <div className="Recipe-section">
           <PicList pictures={recipe.pictures || []} />
         </div>
       )}
       <div className="Recipe-section">
-        <h3>Tags</h3>
+        <h3>Source</h3>
+        <a href={recipe?.source}>{recipe?.source}</a>
+        <h3>Tags (non funzionano ancora)</h3>
         <div className="Recipe-tags-list">
           {recipe?.tags.map((tag) => {
             return <a href={`/tags/${tag}`}>#{tag}</a>;

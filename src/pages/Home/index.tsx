@@ -9,7 +9,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <h1>Tante bele ricete yeee</h1>
-      <a onClick={() => nav("/recipes")}>Ricettine</a>
+      <a onClick={() => nav("/recipes")}>Ricettine (tutte veg)</a>
     </div>
   );
 };

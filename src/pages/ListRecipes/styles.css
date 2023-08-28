@@ -79,3 +79,9 @@
 .Recipes-hint {
   opacity: 0.2;
 }
+
+@media (max-width: 600px) {
+  .Recipes-hint {
+    visibility: hidden;
+  }
+}

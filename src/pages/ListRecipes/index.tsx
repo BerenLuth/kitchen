@@ -48,7 +48,7 @@ const ListRecipes: React.FC = () => {
   return (
     <div className="Recipes-wrapper">
       <div className="Recipes-title-search">
-        <h1>Recipes</h1>
+        <h1>Ricettine</h1>
         <IconButton
           onClick={() => {
             setIsSearching(!isSearching);
@@ -109,7 +109,7 @@ const ListRecipes: React.FC = () => {
             );
           })}
       </div>
-      <div className="Recipes-hint">Press S to quick search</div>
+      <div className="Recipes-hint">Premi S per la ricerca rapida</div>
     </div>
   );
 };

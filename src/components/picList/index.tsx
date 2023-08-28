@@ -49,15 +49,17 @@ const PicList: React.FC<CompProps> = (props: CompProps) => {
       >
         <DialogTitle>{"Use Google's location service?"}</DialogTitle>
         <DialogContent>
-        <ImageViewer
-          src={pictures}
-          currentIndex={clickedImage}
-          disableScroll={false}
-          closeOnClickOutside={true}
-          onClose={() => {
-            setisViewerOpen(false);
-          }}
-        />
+          {isViewerOpen && (
+            <ImageViewer
+              src={pictures}
+              currentIndex={clickedImage}
+              disableScroll={false}
+              closeOnClickOutside={true}
+              onClose={() => {
+                setisViewerOpen(false);
+              }}
+            />
+          )}
         </DialogContent>
         <DialogActions>
           <Button onClick={() => setisViewerOpen(false)}>Close</Button>
