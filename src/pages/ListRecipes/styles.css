@@ -4,6 +4,15 @@
   place-content: center;
 }
 
+.Recipes-title-search {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  place-items: baseline;
+  justify-content: center;
+  padding: 16px;
+}
+
 .Recipes-list-container {
   display: flex;
   flex-direction: column;
@@ -12,6 +21,15 @@
   max-width: 500px;
   place-self: center;
   padding: 16px;
+}
+
+.Recipes-search-bar {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  max-height: 200px;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .Recipes-element {
@@ -51,4 +69,8 @@
   object-fit: cover;
   border-radius: 16px;
 
+}
+
+.Recipes-hint {
+  opacity: 0.2;
 }
