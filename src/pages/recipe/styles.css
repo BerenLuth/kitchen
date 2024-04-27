@@ -12,6 +12,7 @@
   height: 350px;
   background-size: cover;
   margin-bottom: 32px;
+  background-position: center;
 }
 
 .Recipe-title {

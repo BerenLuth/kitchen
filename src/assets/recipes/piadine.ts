@@ -37,7 +37,7 @@ const tags = ["piadine", "vegan", "farro", "tortilla"];
 
 const pics: string[] = ["/recipesPics/piadine/cover.jpg", "/recipesPics/piadine/piadine_farcite.jpg", "/recipesPics/piadine/piadine_pronte.jpg"];
 
-export const Grattugiato: Recipe = {
+export const PiadineAlFarro: Recipe = {
   id: "piadine_farro",
   name: "Piadine di farro integrale",
   ingredients,
